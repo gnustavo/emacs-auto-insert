@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""A simple python script template.
+
+Usage: script [options]
+
+Options:
+  --region REGION A AWS region name [default: us-east-1]
+  --tags TAGS     Optional YAML file containig tag overrides.
+  -h --help       Show this screen.
+  -n --dont       Do nothing.
+  -v --verbose    Show lots of informational messages.
+  -d --debug      Show debug messages.
+
+"""
+
+import os
+import sys
+import docopt
+
+# sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+#                                 'lib', 'python'))
+# from cpqd import utils            # noqa: E402
+
+__author__ = 'Gustavo Chaves <gustavo@cpqd.com.br>'
+__copyright__ = 'Copyright 2019, CPqD'
+
+
+def main(args):
+    """This is the main function, Dude!"""
+    return 0
+
+
+if __name__ == '__main__':
+    if sys.version_info[0] < 3:
+        sys.exit("This script requires Python 3!")
+
+    sys.exit(main(docopt.docopt(__doc__)))
